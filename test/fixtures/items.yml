@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_name: MyString
+  categoly: 1
+  price: MyString
+  image: MyString
+  product_description: MyString
+  product_condition: 1
+  shipping_charges: 1
+  shipping_area: 1
+  days_to_ship: 1
+  user_id: MyString
+  foreign_key: MyString
+  'true': MyString
+
+two:
+  product_name: MyString
+  categoly: 1
+  price: MyString
+  image: MyString
+  product_description: MyString
+  product_condition: 1
+  shipping_charges: 1
+  shipping_area: 1
+  days_to_ship: 1
+  user_id: MyString
+  foreign_key: MyString
+  'true': MyString

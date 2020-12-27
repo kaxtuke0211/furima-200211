@@ -10,7 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_23_113524) do
+ActiveRecord::Schema.define(version: 2020_12_27_213131) do
+
+  create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "product_name"
+    t.integer "categoly"
+    t.string "price"
+    t.string "image"
+    t.string "product_description"
+    t.integer "product_condition"
+    t.integer "shipping_charges"
+    t.integer "shipping_area"
+    t.integer "days_to_ship"
+    t.string "user_id"
+    t.string "foreign_key"
+    t.string "true"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.index ["email"], name: "index_items_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_items_on_reset_password_token", unique: true
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -20,6 +44,12 @@ ActiveRecord::Schema.define(version: 2020_12_23_113524) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "nickname"
+    t.string "password"
+    t.string "confimation_password"
+    t.string "birthday"
+    t.string "name"
+    t.string "name_reading"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
